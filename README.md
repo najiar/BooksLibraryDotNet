@@ -17,5 +17,10 @@ Naje Abdulrahman F97794: "N" </br>
 Hristiyan Marinov F96087: "H" </br>
 
 Tasks:</br>
+AccountsController : "N" </br>
+LoginController: "H" </br>
+BooksControler: "N" / "H" </br>
+MyBooksContoler: "N" / "H" </br>
+
 
 
