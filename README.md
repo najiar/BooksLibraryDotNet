@@ -13,9 +13,9 @@ To start the program properly first you need to connect the DB context to your d
 After that run the command `Update-Database` in the Package manager console to ensure all of the tables are created in the database
 
 # Work is done by </br>
-Naje Abdulrahman F97794: </br> "N"
-Hristiyan Marinov F96087: </br> "H"
+Naje Abdulrahman F97794: "N" </br>
+Hristiyan Marinov F96087: "H" </br>
 
-Tasks:
+Tasks:</br>
 
 
