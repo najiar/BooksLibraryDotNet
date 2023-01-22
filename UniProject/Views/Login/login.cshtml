@@ -1,0 +1,49 @@
+﻿@model UniProject.Models.Login
+@{
+    ViewData["Title"] = "Login";
+    
+}
+    
+
+<div class="row">
+    <div class="col-md-6 offset-md-3">
+        <h3 class="text-center">Login</h3>
+        <hr />
+        <form asp-action="Verify" autocomplete="off">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Email" class="control-label"></label>
+                <input required asp-for="Email" class="form-control" />
+                <span asp-validation-for="Email" class="text-danger"></span>
+            </div>
+                
+            <div class="form-group">
+                <label asp-for="Password" class="control-label"></label>
+                <input required asp-for="Password" type="password" class="form-control" />
+            <span asp-validation-for="Password" class="text-danger"></span>
+            </div>
+
+
+            <div class="row mt-2">
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <button type="submit" class="btn btn-primary w-100">
+                            <i class="fa-solid fa-right-to-bracket"></i> Login
+                        </button>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div>
+                        <a class="btn btn-secondary w-100" asp-action="RedirectToRegister">
+                            <i class="fa-sharp fa-solid fa-id-card"></i> Register
+                        </a>
+                    </div>
+                </div>
+                <div class= "text-center">
+                    <h5 class="text-danger">@ViewBag.loginValidation</h5><br />
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+

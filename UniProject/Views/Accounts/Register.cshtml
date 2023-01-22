@@ -1,0 +1,77 @@
+﻿@model UniProject.Models.Register
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+
+<h3 class="text-center">Register</h3>
+<hr />
+<div class="row">
+    <div class="col-md-6 offset-md-3">
+        <form asp-action="Register">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="row"> 
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label asp-for="FirstName" class="control-label"></label>
+                        <input required asp-for="FirstName" class="form-control" />
+
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label asp-for="LastName" class="control-label"></label>
+                        <input required asp-for="LastName" class="form-control" />
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="form-group">
+                    <label asp-for="Email" class="control-label"></label>
+                    <input required asp-for="Email" class="form-control" />
+                </div>
+            </div>
+            <div class="row">
+                <div class="form-group">
+                    <label asp-for="Password" class="control-label"></label>
+                    <input required  type="password" asp-for="Password" class="form-control" />
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label asp-for="Gender" class="control-label"></label>
+                        <select required asp-for="Gender" class="form-control">
+                            <option>Male</option>
+                            <option>Female</option>
+                            <option>Other</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label asp-for="Age" class="control-label"></label>
+                        <input type="number" asp-for="Age" min="18" max="120" step="1" value="18" class="form-control">
+                    </div>
+                </div>
+            </div>
+            <div class="row mt-2 text-center">
+                
+                <div class="form-group">
+                    <button type="submit" value="Register" class="btn btn-primary w-100"> 
+                        <i class="fa-sharp fa-solid fa-id-card"></i> Register
+                    </button>
+                </div>
+                <div>
+                    <h5 class="text-danger">@ViewBag.regexValidation</h5><br />
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

@@ -1,0 +1,82 @@
+﻿@model UniProject.Models.Book
+
+@{
+    ViewData["Title"] = "Book";
+}
+
+<div class="row">
+    <div class="col-md-6 offset-md-3">
+        <h1>Book</h1>
+        <hr />
+        <form asp-action="AddOrEdit" autocomplete="off">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="BookId"/>
+            
+            <div class="form-group">
+                <label asp-for="Title" class="control-label"></label>
+                <input required asp-for="Title" class="form-control" />
+                <span asp-validation-for="Title" class="text-danger"></span>
+            </div>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label asp-for="isbn" class="control-label"></label>
+                        <input required asp-for="isbn" class="form-control" />
+                        <span asp-validation-for="isbn" class="text-danger"></span>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label asp-for="Author" class="control-label"></label>
+                        <input required asp-for="Author" class="form-control" />
+                        <span asp-validation-for="Author" class="text-danger"></span>
+                    </div>
+                </div>
+            </div>
+            <div class="form-group">
+                <label asp-for="Category" class="control-label"></label>
+                <select asp-for="Category" class="form-control" id="categoryInput">
+                    <option>General</option>
+                    <option>Technology</option>
+                    <option>Sports</option>
+                    <option>Entertainment</option>
+                    <option>Other</option>
+                </select>
+                <span asp-validation-for="Category" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="PublicationYear" class="control-label"></label>
+                <input required type="date" asp-for="PublicationYear" class="form-control" />
+                <span asp-validation-for="PublicationYear" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Image" class="control-label"></label>
+                <input asp-for="Image" class="form-control" />
+                <span asp-validation-for="Image" class="text-danger"></span>
+            </div>
+            
+            
+            <div class="row mt-2">
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <button type="submit" class="btn btn-success w-100">
+                            <i class="fa-solid fa-check"></i> Submit
+                        </button>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div>
+                        <a class="btn btn-secondary w-100" asp-action="Index">
+                            <i class="fa-solid fa-book"></i> View All Books
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div> 
+</div>
+
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

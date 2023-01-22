@@ -1,0 +1,27 @@
+﻿@model UniProject.Models.Register
+
+@{
+    ViewData["Title"] = "Delete";
+}
+
+<h3 class="text-center">Are you sure you want to delete this Account?</h3>
+<hr/>
+<div class="text-center">
+    <form asp-action="Delete">
+        <div class="row">
+            <div class="col">
+                <input type="hidden" asp-for="AccountId" />
+                <button type="submit" value="Delete" class="btn btn-danger">
+                    <i class="fa-sharp fa-solid fa-trash"></i> Delete
+                </button>
+            </div>
+            <div class="col">
+                <a class="btn btn-secondary" asp-action="Index">
+                    <i class="fa-solid fa-users"></i> View All Accounts
+                </a>
+            </div>
+           
+        </div>
+    </form>
+    
+</div>

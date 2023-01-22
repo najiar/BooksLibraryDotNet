@@ -1,0 +1,56 @@
+﻿@model IEnumerable<UniProject.Models.Book>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h3 class="text-center">Books</h3>
+<hr />
+<div class="row">
+    <a class="btn btn-warning" asp-action="AddOrEdit">
+        Add a new book
+        <i class="fa-sharp fa-solid fa-plus"></i>
+    </a>
+</div>
+<hr />
+
+<div class="row  row-cols-1 row-cols-md-3 mb-3 text-center">
+        @foreach (var item in Model) {
+            <div class="col">
+               <div class="card mb-4">
+                <img class="card-img-top embed-responsive-item" src="@Url.Content(item.Image)" alt="Image" style="width: 100%; height: 30vh; object-fit: contain;" />
+                  <div class="card-header">
+                    <h7 class="card-title">Title: @item.Title</h7>
+                  </div>
+                  <div class="card-body">
+                        <h7>Author: @item.Author</h7>
+                        <br />  
+                        <h7>ISBN: @item.isbn</h7>
+                        <br/>
+                        <h7>Category: @item.Category</h7>
+                        <br/>
+                        <h7>Publication year: @item.PublicationYear</h7>
+                        <br/>
+                        <div class="row mt-2">
+                            <div class="col">
+                                 <a class="btn btn-warning" asp-action="AddOrEdit" asp-route-id="@item.BookId">
+                                    <i class="fa-solid fa-pen-to-square"></i>
+                                </a>
+                            </div>
+                            <div class="col">
+                                <a class="btn btn-danger" asp-action="Delete" asp-route-id="@item.BookId">
+                                    <i class="fa-solid fa-xmark"></i>
+                                </a>
+                            </div>
+                            <div class="col">
+                                <a class="btn btn-warning" asp-action="SaveBook" asp-route-id="@item.BookId">
+                                <i class="fa-sharp fa-solid fa-plus"></i>
+                              </a>
+                        </div>
+                        
+                        </div>
+                  </div>
+                </div>
+            </div>
+        }
+</div>
