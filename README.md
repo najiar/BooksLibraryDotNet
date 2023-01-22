@@ -1,7 +1,7 @@
 # BooksLibraryDotNet
 Books library web application using .NET
 
-This web application has the following functionalities:
+This web application has the following functionalities: </br>
 Users can register and login
 Users can add/delete/edit books to the main books library tab
 Users which has admin rights are allowed to use the Admin panel
