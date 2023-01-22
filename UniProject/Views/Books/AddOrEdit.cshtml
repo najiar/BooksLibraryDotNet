@@ -14,21 +14,21 @@
             
             <div class="form-group">
                 <label asp-for="Title" class="control-label"></label>
-                <input required asp-for="Title" class="form-control" />
+                <input type ="text" required asp-for="Title" class="form-control" />
                 <span asp-validation-for="Title" class="text-danger"></span>
             </div>
             <div class="row">
                 <div class="col-md-6">
                     <div class="form-group">
                         <label asp-for="isbn" class="control-label"></label>
-                        <input required asp-for="isbn" class="form-control" />
+                        <input type="number" required asp-for="isbn" class="form-control" />
                         <span asp-validation-for="isbn" class="text-danger"></span>
                     </div>
                 </div>
                 <div class="col-md-6">
                     <div class="form-group">
                         <label asp-for="Author" class="control-label"></label>
-                        <input required asp-for="Author" class="form-control" />
+                        <input type="text" required asp-for="Author" class="form-control" />
                         <span asp-validation-for="Author" class="text-danger"></span>
                     </div>
                 </div>
