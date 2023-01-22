@@ -10,5 +10,5 @@ Users can add/delete books to My books tab which tracks the books which they hav
 
 # Database Mysql
 To start the program properly first you need to connect the DB context to your desired DB</br>
-After that run the coommand Update-Database in the Package manager console to ensure all of the tables are created in the database
+After that run the command `Update-Database` in the Package manager console to ensure all of the tables are created in the database
 
