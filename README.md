@@ -12,3 +12,10 @@ Users can add/delete books to My books tab which tracks the books which they hav
 To start the program properly first you need to connect the DB context to your desired DB</br>
 After that run the command `Update-Database` in the Package manager console to ensure all of the tables are created in the database
 
+# Work is done by </br>
+Naje Abdulrahman F97794: </br> "N"
+Hristiyan Marinov F96087: </br> "H"
+
+Tasks:
+
+
